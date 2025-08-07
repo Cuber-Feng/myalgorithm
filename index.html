@@ -9,36 +9,40 @@
 </head>
 
 <body>
-    <div>
-        <h3>参数设置</h3>
-        <label>选择类别：
-            <select id="stage">
-                <option value="pll">PLL</option>
-                <option value="oll">OLL</option>
-                <option value="bird">鸟</option>
-            </select>
-        </label>
-        <br><br>
+    <div style="display: none;">
+        <div>
+            <h3>参数设置</h3>
+            <label>选择类别：
+                <select id="stage">
+                    <option value="pll">PLL</option>
+                    <option value="oll">OLL</option>
+                    <option value="bird">鸟</option>
+                </select>
+            </label>
+            <br><br>
 
-        <label>Size
-            <input type="number" id="size" value="80">
-        </label>
-        <br><br>
-        <label>Algorithm
-            <textarea name="Case" id="case" placeholder="Input The Algorithm"></textarea>
-        </label>
+            <label>Size
+                <input type="number" id="size" value="80">
+            </label>
+            <br><br>
+            <label>Algorithm
+                <textarea name="Case" id="case" placeholder="Input The Algorithm"></textarea>
+            </label>
 
-        <button id="update">更新图片</button>
+            <button id="update">更新图片</button>
+        </div>
+
+        <div>
+            <img id="preview" src="" alt="图片预览" style="max-width:100%; max-height:100%;">
+        </div>
+
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;PLL (2017FENG35)</h2>
+        <div id="tableContainer"> </div>
+
     </div>
 
-    <div>
-        <img id="preview" src="" alt="图片预览" style="max-width:100%; max-height:100%;">
-    </div>
-
-    <h2>&nbsp;&nbsp;&nbsp;&nbsp;PLL (2017FENG35)</h2>
-    <div id="tableContainer">
-
-    </div>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;OLL (2017FENG35)</h2>
+    <div id="tableContainer-oll"> </div>
     <script src="./js/script.js"></script>
 </body>
 

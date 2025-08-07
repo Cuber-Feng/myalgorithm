@@ -37,7 +37,7 @@ fetch('./data/pll.json')
         for (const alg in pll) {
             if (cnt % 4 == 0) {
                 table.appendChild(tr);
-                tr=document.createElement('tr');
+                tr = document.createElement('tr');
             }
             console.log(alg, ':', pll[alg]);
             let td = document.createElement('td');
@@ -48,10 +48,46 @@ fetch('./data/pll.json')
             algblock.textContent = pll[alg];
             td.appendChild(algblock);
             tr.appendChild(td);
-            cnt+=1;
+            cnt += 1;
         }
         table.appendChild(tr);
         document.getElementById('tableContainer').appendChild(table);
+
+    })
+    .catch(error => console.error(error));
+
+
+let oll;
+fetch('./data/oll.json')
+    .then(response => response.json())
+    .then(data => {
+        oll = data[0];
+        console.log(oll);
+
+        let table = document.createElement('table');
+        table.style.border = '1px solid';
+        let tr = document.createElement('tr');
+        let cnt = 0;
+
+        for (const alg in oll) {
+            if (cnt % 6 == 0) {
+                table.appendChild(tr);
+                tr = document.createElement('tr');
+            }
+            console.log(alg, ':', oll[alg]);
+            let td = document.createElement('td');
+            td.style.border = '1px solid';
+            td.innerHTML = `<img src="https://cube.rider.biz/visualcube.php?fmt=svg&stage=oll&bg=t&size=80&view=plan&case=${oll[alg]}" >
+            <div id = 'algName'>${alg}<div>`;
+            let algblock = document.createElement('div');
+            algblock.textContent = oll[alg];
+            algblock.style.textAlign = 'center';
+            td.appendChild(algblock);
+            tr.appendChild(td);
+            cnt += 1;
+        }
+        table.appendChild(tr);
+        document.getElementById('tableContainer-oll').appendChild(table);
 
     })
     .catch(error => console.error(error));
