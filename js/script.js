@@ -35,7 +35,7 @@ fetch('./data/pll.json')
         let cnt = 0;
 
         for (const alg in pll) {
-            if (cnt % 5 == 0) {
+            if (cnt % 4 == 0) {
                 table.appendChild(tr);
                 tr=document.createElement('tr');
             }
