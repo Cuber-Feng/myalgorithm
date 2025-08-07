@@ -70,7 +70,7 @@ fetch('./data/oll.json')
         let cnt = 0;
 
         for (const alg in oll) {
-            if (cnt % 6 == 0) {
+            if (cnt % 5 == 0) {
                 table.appendChild(tr);
                 tr = document.createElement('tr');
             }
