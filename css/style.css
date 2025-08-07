@@ -12,15 +12,16 @@ table {
 }
 
 td {
-    width: 10rem;
+    /* width: 10rem; */
     padding: 0.1rem;
     vertical-align: top;
+    border: 0 !important;
 }
 td img { 
-    margin: 0 3rem;
+    margin: 0 0.1rem;
 }
 
 #algName {
-    font-size: 1.3rem;
-    font-weight: 600;
+    /* font-size: 1.3rem; */
+    /* font-weight: 600; */
 }

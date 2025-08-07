@@ -65,24 +65,22 @@ fetch('./data/oll.json')
         console.log(oll);
 
         let table = document.createElement('table');
-        table.style.border = '1px solid';
         let tr = document.createElement('tr');
         let cnt = 0;
 
         for (const alg in oll) {
-            if (cnt % 5 == 0) {
+            if (cnt % 7 == 0) {
                 table.appendChild(tr);
                 tr = document.createElement('tr');
             }
             console.log(alg, ':', oll[alg]);
             let td = document.createElement('td');
-            td.style.border = '1px solid';
             td.innerHTML = `<img src="https://cube.rider.biz/visualcube.php?fmt=svg&stage=oll&bg=t&size=80&view=plan&case=${oll[alg]}" >
-            <div id = 'algName'>${alg}<div>`;
+            `; //<div id = 'algName'>${alg}<div>
             let algblock = document.createElement('div');
             algblock.textContent = oll[alg];
             algblock.style.textAlign = 'center';
-            td.appendChild(algblock);
+            //td.appendChild(algblock);
             tr.appendChild(td);
             cnt += 1;
         }
