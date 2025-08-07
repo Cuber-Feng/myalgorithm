@@ -35,14 +35,14 @@ fetch('./data/pll.json')
         let cnt = 0;
 
         for (const alg in pll) {
-            if (cnt % 8 == 0) {
+            if (cnt % 5 == 0) {
                 table.appendChild(tr);
                 tr=document.createElement('tr');
             }
             console.log(alg, ':', pll[alg]);
             let td = document.createElement('td');
             td.style.border = '1px solid';
-            td.innerHTML = `<img src="https://cube.rider.biz/visualcube.php?fmt=svg&size=100&stage=${stage.value}&view=plan&case=${pll[alg]}" >
+            td.innerHTML = `<img src="https://cube.rider.biz/visualcube.php?fmt=svg&bg=t&size=100&stage=${stage.value}&view=plan&case=${pll[alg]}" >
             <div id = 'algName'>${alg}<div>`;
             tr.appendChild(td);
             cnt+=1;
