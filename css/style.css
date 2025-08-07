@@ -10,3 +10,17 @@
 table {
     border-collapse: collapse;
 }
+
+td {
+    width: 10rem;
+    padding: 0.4rem;
+    vertical-align: top;
+}
+td img { 
+    margin: 0 2rem;
+}
+
+#algName {
+    font-size: 1.3rem;
+    font-weight: 600;
+}

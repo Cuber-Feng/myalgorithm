@@ -44,6 +44,9 @@ fetch('./data/pll.json')
             td.style.border = '1px solid';
             td.innerHTML = `<img src="https://cube.rider.biz/visualcube.php?fmt=svg&bg=t&size=100&stage=${stage.value}&view=plan&case=${pll[alg]}" >
             <div id = 'algName'>${alg}<div>`;
+            let algblock = document.createElement('div');
+            algblock.textContent = pll[alg];
+            td.appendChild(algblock);
             tr.appendChild(td);
             cnt+=1;
         }
